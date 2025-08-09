@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/tianqizhu/algorithm/build/_deps/googletest-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
