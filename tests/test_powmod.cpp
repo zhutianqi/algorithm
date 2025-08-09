@@ -40,6 +40,3 @@ TEST(PowModFixedTest, LargeNumbersPrimeMod1000000007) {
 TEST(PowModFixedTest, LargeNumbersPrimeMod1000000008) {
     EXPECT_EQ(util::mod_pow_fixed<1000000008>(123456789, 987654321), 748228797);
 }
-
-
-

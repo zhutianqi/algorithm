@@ -14,6 +14,14 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 # --------- 自动搜集 src 下的 cpp ---------
 file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 
+file(GLOB CONFIGURE_DEPENDS TEST_FILES ${CMAKE_SOURCE_DIR}/tests/*.cpp)
+foreach(test_src ${TEST_FILES})
+  get_filename_component(test_name ${test_src} NAME_WE)
+  add_executable(${test_name}_tests ${test_src})
+  target_link_libraries(${test_name}_tests PRIVATE algo GTest::gtest_main)
+  gtest_discover_tests(${test_name}_tests)
+endforeach()
+
 # --------- 编译成静态库 ---------
 add_library(algo STATIC ${SRC_FILES})
 
