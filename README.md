@@ -14,8 +14,9 @@
  ### CMake + Ninja + GCC 15
  ```shell
  cmake -S . -B build -G Ninja \
-   -DCMAKE_C_COMPILER=$(brew --prefix)/bin/gcc-15 \
-   -DCMAKE_CXX_COMPILER=$(brew --prefix)/bin/g++-15
+  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_C_COMPILER=$(brew --prefix)/bin/gcc-15 \
+  -DCMAKE_CXX_COMPILER=$(brew --prefix)/bin/g++-15
  cmake --build build
  ```
 
