@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
+# --------- cmake Xcode ---------
+set(CMAKE_OSX_DEPLOYMENT_TARGET "14.6" CACHE STRING "Minimum OS X deployment version")
+
 project(algorithm LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -13,6 +16,23 @@ file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 
 # --------- 编译成静态库 ---------
 add_library(algo STATIC ${SRC_FILES})
+
+# --------- hpp ---------
+file(GLOB_RECURSE HDRS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/include/*.hpp)
+target_sources(algo PUBLIC ${HDRS})
+
+# ---- 让 README 和顶层 CMakeLists 也显示在 IDE 里 ----
+set(META_FILES
+    ${CMAKE_SOURCE_DIR}/README.md
+    ${CMAKE_SOURCE_DIR}/CMakeLists.txt
+)
+
+target_sources(algo PRIVATE ${META_FILES})
+# 标记为“只读源文件”，避免被当作可编译文件
+set_source_files_properties(${META_FILES} PROPERTIES HEADER_FILE_ONLY TRUE)
+
+# 分组（Xcode/VS 可见更清晰）
+source_group(TREE ${CMAKE_SOURCE_DIR} FILES ${SRC_FILES} ${HDRS} ${META_FILES})
 
 # --------- 主程序 ---------
 add_executable(app app/main.cpp)
@@ -35,5 +55,3 @@ target_link_libraries(unit_tests PRIVATE algo GTest::gtest_main)
 include(GoogleTest)
 gtest_discover_tests(unit_tests DISCOVERY_MODE PRE_TEST)
 
-# --------- cmake Xcode ---------
-set(CMAKE_OSX_DEPLOYMENT_TARGET "14.6" CACHE STRING "Minimum OS X deployment version")
