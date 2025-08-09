@@ -28,6 +28,19 @@
 		EF94F2452E46BA7A00AFBC8A /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EF3399142E46BD53004D4424 /* src */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = src;
+			sourceTree = "<group>";
+		};
+		EF3399172E46BEDF004D4424 /* include */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		EF94F2422E46BA7A00AFBC8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -39,20 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF3399132E46BC0C004D4424 /* statistics */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = statistics;
-			sourceTree = "<group>";
-		};
 		EF94F23C2E46BA7A00AFBC8A = {
 			isa = PBXGroup;
 			children = (
 				EF94F2462E46BA7A00AFBC8A /* Products */,
 				EF33990F2E46BBE5004D4424 /* main.cpp */,
 				EF3399122E46BC0C004D4424 /* README.md */,
-				EF3399132E46BC0C004D4424 /* statistics */,
+				EF3399142E46BD53004D4424 /* src */,
+				EF3399172E46BEDF004D4424 /* include */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +85,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EF3399142E46BD53004D4424 /* src */,
+				EF3399172E46BEDF004D4424 /* include */,
 			);
 			name = algorithm;
 			packageProductDependencies = (

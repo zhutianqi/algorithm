@@ -6,10 +6,13 @@
 //
 
 #include <iostream>
+#include <bits/stdc++.h>
+#include <ranges>
+#include "all.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Hello, World!\n";
     return 0;
 }
 
