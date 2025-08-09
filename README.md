@@ -10,5 +10,13 @@
 ## 安装
 ```bash
 git clone https://github.com/xxx/your-project.git
-cd your-project
-npm install
+cd your-project```
+
+- cmake
+```
+cmake -S . -B build -G Ninja \
+  -DCMAKE_C_COMPILER=$(brew --prefix)/bin/gcc-15 \
+  -DCMAKE_CXX_COMPILER=$(brew --prefix)/bin/g++-15
+  
+cmake --build build  
+```

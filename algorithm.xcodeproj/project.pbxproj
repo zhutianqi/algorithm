@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		EF3399102E46BBE5004D4424 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF33990F2E46BBE5004D4424 /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		EF94F2432E46BA7A00AFBC8A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -23,8 +19,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EF33990F2E46BBE5004D4424 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EF3399122E46BC0C004D4424 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EF3399322E46D207004D4424 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		EF94F2452E46BA7A00AFBC8A /* algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +33,16 @@
 		EF3399172E46BEDF004D4424 /* include */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = include;
+			sourceTree = "<group>";
+		};
+		EF33992E2E46D17D004D4424 /* app */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = app;
+			sourceTree = "<group>";
+		};
+		EF3399302E46D1B0004D4424 /* tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -55,9 +61,11 @@
 		EF94F23C2E46BA7A00AFBC8A = {
 			isa = PBXGroup;
 			children = (
+				EF3399322E46D207004D4424 /* CMakeLists.txt */,
 				EF94F2462E46BA7A00AFBC8A /* Products */,
-				EF33990F2E46BBE5004D4424 /* main.cpp */,
+				EF33992E2E46D17D004D4424 /* app */,
 				EF3399122E46BC0C004D4424 /* README.md */,
+				EF3399302E46D1B0004D4424 /* tests */,
 				EF3399142E46BD53004D4424 /* src */,
 				EF3399172E46BEDF004D4424 /* include */,
 			);
@@ -89,6 +97,8 @@
 			fileSystemSynchronizedGroups = (
 				EF3399142E46BD53004D4424 /* src */,
 				EF3399172E46BEDF004D4424 /* include */,
+				EF33992E2E46D17D004D4424 /* app */,
+				EF3399302E46D1B0004D4424 /* tests */,
 			);
 			name = algorithm;
 			packageProductDependencies = (
@@ -108,6 +118,7 @@
 				TargetAttributes = {
 					EF94F2442E46BA7A00AFBC8A = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -135,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3399102E46BBE5004D4424 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,16 +270,23 @@
 		EF94F24D2E46BA7A00AFBC8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "algorithm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		EF94F24E2E46BA7A00AFBC8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "algorithm-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
