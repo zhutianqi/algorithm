@@ -14,11 +14,8 @@
 # EXTERNAL cache entries
 ########################
 
-//Enable/Disable output of build database during the build.
-CMAKE_EXPORT_BUILD_DATABASE:BOOL=
-
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_CONFIGURATION_TYPES:STRING=Debug
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/tianqizhu/algorithm/build/_deps/googletest-subbuild/CMakeFiles/pkgRedirects
@@ -30,7 +27,7 @@ CMAKE_INSTALL_NAME_TOOL:FILEPATH=/Users/tianqizhu/anaconda3/bin/install_name_too
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:FILEPATH=/opt/homebrew/bin/ninja
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/xcodebuild
 
 //Build architectures for OSX
 CMAKE_OSX_ARCHITECTURES:STRING=
@@ -97,6 +94,8 @@ googletest-populate_SOURCE_DIR:STATIC=/Users/tianqizhu/algorithm/build/_deps/goo
 # INTERNAL cache entries
 ########################
 
+//Stored Xcode object GUID
+ALL_BUILD_GUID_CMAKE:INTERNAL=97CDE56C751DCA44126ECB60
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/Users/tianqizhu/algorithm/build/_deps/googletest-subbuild
 //Major version of cmake used to create the current loaded cache
@@ -111,16 +110,10 @@ CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 CMAKE_CPACK_COMMAND:INTERNAL=/opt/homebrew/bin/cpack
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/opt/homebrew/bin/ctest
-//Path to cache edit program executable.
-CMAKE_EDIT_COMMAND:INTERNAL=/opt/homebrew/bin/ccmake
-//ADVANCED property for variable: CMAKE_EXPORT_BUILD_DATABASE
-CMAKE_EXPORT_BUILD_DATABASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Ninja
+CMAKE_GENERATOR:INTERNAL=Xcode
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
@@ -148,4 +141,10 @@ CMAKE_SKIP_RPATH-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Stored Xcode object GUID
+PROJECT_googletest-populate_GUID_CMAKE:INTERNAL=66B4C4E39C5F49A293BB6B9F
+//Stored Xcode object GUID
+ZERO_CHECK_GUID_CMAKE:INTERNAL=2FC1A08FD28601791D8E1D2B
+//Stored Xcode object GUID
+googletest-populate_GUID_CMAKE:INTERNAL=3BB6BF567CB94DAB9AF14EAE
 

@@ -13,7 +13,7 @@ git clone https://github.com/xxx/your-project.git
 cd your-project
 ```
 
-- cmake
+- cmake Ninja, gcc-15 (for #include <bits/stdc++.h>)
 ```bash
 cmake -S . -B build -G Ninja \
   -DCMAKE_C_COMPILER=$(brew --prefix)/bin/gcc-15 \
@@ -21,3 +21,11 @@ cmake -S . -B build -G Ninja \
   
 cmake --build build  
 ```
+
+- cmake Xcode
+```bash
+cmake -S . -B build -G Xcode \
+  -DCMAKE_C_COMPILER=clang \
+  -DCMAKE_CXX_COMPILER=clang++
+```
+  
