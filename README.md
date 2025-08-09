@@ -11,7 +11,7 @@
  
  ---
 
- ### CMake + Ninja + GCC 15
+ ### VSCode (推荐) CMake + Ninja + GCC 15
  ```shell
  cmake -S . -B build -G Ninja \
   -DCMAKE_BUILD_TYPE=Debug \
@@ -22,7 +22,7 @@
 
  ---
 
- ### （Mac OS推荐）CMake + Xcode
+ ### （Mac OS）CMake + Xcode
   ```shell
  cmake -S . -B build -G Xcode \
    -DCMAKE_C_COMPILER=clang \

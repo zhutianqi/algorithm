@@ -16,10 +16,44 @@
 
 namespace stats {
 
-    inline Dist clt_iid_params_sigma(double mu, double sigma, double scale) {
+    // iid: independent identical distribution
+    Dist clt_iid_params_sigma(double mu, double sigma, double scale) {
         double Mu = scale * mu;
         double Sigma = sqrt(scale) * sigma; // 因为 Var_sum = scale * sigma^2
         return { Mu, Sigma };
+    }
+
+    // iid probability less than threshhold a
+    double clt_iid_prob_less(double mu, double sigma, double scale, double a) {
+        Dist dist = clt_iid_params_sigma(mu, sigma, scale);
+        return normal_head_prob(dist.mu, dist.sigma, a);
+    }
+
+    // ind: independent non-identical case
+    Dist clt_ind_params_sigma(
+        const std::vector<Dist>& dists
+    ) {
+        size_t n = dists.size();
+        if (n == 0) {
+            throw std::invalid_argument("clt_iid_params_sigma: empty distribution vector");
+        }
+        double Mu = 0.0;
+        double Sigma = 0.0;
+        for (const auto& dist : dists) {
+            Mu += dist.mu;
+            Sigma += dist.sigma * dist.sigma; // Var_sum = sum of variances
+        }
+        Sigma = sqrt(Sigma); // 标准差是方差的平方根
+        return { Mu, Sigma };
+    }
+
+    // ind probability less than threshhold a
+    double clt_ind_prob_less(
+        const std::vector<Dist>& dists,
+        double a
+    ) {
+        Dist dist = clt_ind_params_sigma(dists);
+        return normal_head_prob(dist.mu, dist.sigma, a);
     }
 
 }

@@ -45,4 +45,14 @@ namespace stats {
         if (sigma <= 0) return mu < a ? 0.0 : (mu == a ? 0.5 : 1.0);
         return phi((mu - a) / sigma);
     }
+
+
+
+    
+    // CLT
+    Dist clt_iid_params_sigma(double mu, double sigma, double scale);
+    double clt_iid_prob_less(double mu, double sigma, double scale, double a);
+    Dist clt_ind_params_sigma(const std::vector<Dist>& dists);
+    double clt_ind_prob_less(const std::vector<Dist>& dists, double a);
+    
 }
