@@ -4,11 +4,11 @@
 
  ## 构建方式
 
- ### 原生 Xcode
+ ### （不推荐）原生 Xcode
  直接打开：
  algorithm.xcodeproj
- 选择目标并运行即可。
-
+ 选择目标并运行即可。 不过得自己配置gtest啥的 很麻烦
+ 
  ---
 
  ### CMake + Ninja + GCC 15
@@ -21,7 +21,7 @@
 
  ---
 
- ### CMake + Xcode
+ ### （Mac OS推荐）CMake + Xcode
   ```shell
  cmake -S . -B build -G Xcode \
    -DCMAKE_C_COMPILER=clang \
