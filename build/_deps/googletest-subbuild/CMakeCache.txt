@@ -27,7 +27,7 @@ CMAKE_INSTALL_NAME_TOOL:FILEPATH=/Users/tianqizhu/anaconda3/bin/install_name_too
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //No help, variable specified on the command line.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/xcodebuild
+CMAKE_MAKE_PROGRAM:FILEPATH=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 
 //Build architectures for OSX
 CMAKE_OSX_ARCHITECTURES:STRING=
@@ -142,7 +142,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Stored Xcode object GUID
-PROJECT_googletest-populate_GUID_CMAKE:INTERNAL=66B4C4E39C5F49A293BB6B9F
+PROJECT_googletest-populate_GUID_CMAKE:INTERNAL=94176C3AF8064DC999ABE58A
 //Stored Xcode object GUID
 ZERO_CHECK_GUID_CMAKE:INTERNAL=2FC1A08FD28601791D8E1D2B
 //Stored Xcode object GUID

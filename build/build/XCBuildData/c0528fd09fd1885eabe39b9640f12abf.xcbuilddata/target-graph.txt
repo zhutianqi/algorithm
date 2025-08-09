@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'app' in project 'algorithm'
+➜ Explicit dependency on target 'algo' in project 'algorithm'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'algorithm'
+Target 'algo' in project 'algorithm'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'algorithm'
+Target 'ZERO_CHECK' in project 'algorithm' (no dependencies)

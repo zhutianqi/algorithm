@@ -1,5 +1,1 @@
-if(EXISTS "/Users/tianqizhu/algorithm/build/unit_tests[1]_tests.cmake")
-  include("/Users/tianqizhu/algorithm/build/unit_tests[1]_tests.cmake")
-else()
-  add_test(unit_tests_NOT_BUILT unit_tests_NOT_BUILT)
-endif()
+include("/Users/tianqizhu/algorithm/build/unit_tests[1]_include-${CTEST_CONFIGURATION_TYPE}.cmake")

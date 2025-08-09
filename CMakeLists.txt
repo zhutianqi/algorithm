@@ -33,4 +33,7 @@ file(GLOB_RECURSE TEST_FILES ${CMAKE_SOURCE_DIR}/tests/*.cpp)
 add_executable(unit_tests ${TEST_FILES})
 target_link_libraries(unit_tests PRIVATE algo GTest::gtest_main)
 include(GoogleTest)
-gtest_discover_tests(unit_tests)
+gtest_discover_tests(unit_tests DISCOVERY_MODE PRE_TEST)
+
+# --------- cmake Xcode ---------
+set(CMAKE_OSX_DEPLOYMENT_TARGET "14.6" CACHE STRING "Minimum OS X deployment version")
