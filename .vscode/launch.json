@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Debug main (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/app",
+      "cwd": "${workspaceFolder}",
+      "args": []
+    },
+    {
+      "name": "Debug ALL gtests (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/unit_tests",
+      "cwd": "${workspaceFolder}",
+      "args": []
+    },
+    {
+      "name": "Debug ONE gtest (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/unit_tests",
+      "cwd": "${workspaceFolder}",
+      "args": ["--gtest_filter=PowModTest.LargeNumbersPrimeMod"]
+    },
+    {
+      "preLaunchTask": "build active cmake target",
+      "name": "Debug CMake Active Target (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}",
+      "args": []
+    }
+  ]
+}
