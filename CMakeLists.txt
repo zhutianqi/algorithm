@@ -42,6 +42,15 @@ set_source_files_properties(${META_FILES} PROPERTIES HEADER_FILE_ONLY TRUE)
 # 分组（Xcode/VS 可见更清晰）
 source_group(TREE ${CMAKE_SOURCE_DIR} FILES ${SRC_FILES} ${HDRS} ${META_FILES})
 
+# --------- Eigen ---------
+find_package(Eigen3 REQUIRED)
+# 让依赖 algo 的目标自动继承 Eigen 的包含路径
+target_link_libraries(algo PUBLIC Eigen3::Eigen)
+
+# --------- Playgorund ---------
+add_executable(scratch scratch/main.cpp)
+target_link_libraries(scratch PRIVATE algo)
+
 # --------- 主程序 ---------
 add_executable(app app/main.cpp)
 target_link_libraries(app PRIVATE algo)
